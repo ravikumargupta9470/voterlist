@@ -1,0 +1,20 @@
+<div>
+<input type="text" #name placeholder="Enter your Name">
+<input type="text" #age placeholder="Enter Age">
+<input type="button" (click)="ab(name.value,age.value)" value="Check">
+
+<h1>Elligible candidate</h1>
+<div *ngFor="let s of sarr">
+ 
+  <app-eligible [arr]="s"></app-eligible>
+  
+</div>
+
+<h1>Not elligible Cnadudate</h1>
+<div *ngFor="let s of sarr">
+ 
+  
+  <app-noteligible [arr1]="s"></app-noteligible>
+</div>
+
+</div>
